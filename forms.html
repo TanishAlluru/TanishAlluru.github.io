@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pizza Ordering Form</title>
+</head>
+<body>
+  <main>
+    <h1>Pizza Ordering Form</h1>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Contact Information</legend>
+
+        <p>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" required>
+        </p>
+
+        <p>
+          <label for="phone">Phone:</label>
+          <input id="phone" name="phone" type="tel" required>
+        </p>
+
+        <p>
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Pizza Size</legend>
+
+        <p>
+          <label for="size">Pizza Size:</label>
+          <select id="size" name="size" required>
+            <option value="" selected disabled>--Select Size--</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XLarge">XLarge</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Sauce</legend>
+
+        <p>
+          <input id="sauce-marinara" name="sauce" type="radio" value="Marinara" required>
+          <label for="sauce-marinara">Marinara</label>
+        </p>
+
+        <p>
+          <input id="sauce-ranch" name="sauce" type="radio" value="Ranch">
+          <label for="sauce-ranch">Ranch</label>
+        </p>
+
+        <p>
+          <input id="sauce-none" name="sauce" type="radio" value="No Sauce">
+          <label for="sauce-none">No Sauce</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Toppings</legend>
+
+        <p><input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+           <label for="pepperoni">Pepperoni</label></p>
+
+        <p><input type="checkbox" id="sausage" name="toppings" value="Sausage">
+           <label for="sausage">Sausage</label></p>
+
+        <p><input type="checkbox" id="mushroom" name="toppings" value="Mushroom">
+           <label for="mushroom">Mushroom</label></p>
+
+        <p><input type="checkbox" id="pineapple" name="toppings" value="Pineapple">
+           <label for="pineapple">Pineapple</label></p>
+
+        <p><input type="checkbox" id="peppers" name="toppings" value="Peppers">
+           <label for="peppers">Peppers</label></p>
+
+        <p><input type="checkbox" id="onions" name="toppings" value="Onions">
+           <label for="onions">Onions</label></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Instructions</legend>
+
+        <p>
+          <label for="instructions">Add instructions</label><br>
+          <textarea id="instructions" name="instructions" rows="4" cols="30"></textarea>
+        </p>
+
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+      </fieldset>
+    </form>
+
+    <section>
+      <h2>List of My Favorite Games</h2>
+
+      <table border="1">
+        <caption>Favorite Video Games</caption>
+        <thead>
+          <tr>
+            <th>Developer</th>
+            <th>Title</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th rowspan="3">Bungie</th>
+            <td>Halo</td>
+            <td>2001</td>
+          </tr>
+          <tr>
+            <td>Halo 2</td>
+            <td>2004</td>
+          </tr>
+          <tr>
+            <td>Halo 3</td>
+            <td>2007</td>
+          </tr>
+          <tr>
+            <th>Mojang</th>
+            <td>Minecraft</td>
+            <td>2011</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="3">Count: 4</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
