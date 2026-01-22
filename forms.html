@@ -10,94 +10,78 @@
 
 <form>
 
-<h2>Contact Information</h2>
+Name:
+<input type="text" required><br><br>
 
-<p>Name:
-<input type="text" name="name" required></p>
+Phone:
+<input type="tel" required><br><br>
 
-<p>Phone:
-<input type="tel" name="phone" required></p>
+Email:
+<input type="email" required><br><br>
 
-<p>Email:
-<input type="email" name="email" required></p>
-
-<h2>Select Pizza Size</h2>
-
-<p>Pizza Size:
-<select name="size" required>
+Pizza Size:
+<select required>
   <option value="">--Select Size--</option>
   <option>Medium</option>
   <option>Large</option>
   <option>XLarge</option>
-</select>
-</p>
+</select><br><br>
 
-<h2>Select Sauce</h2>
+Sauce:<br>
+<input type="radio" name="sauce" required> Marinara<br>
+<input type="radio" name="sauce"> Ranch<br>
+<input type="radio" name="sauce"> No Sauce<br><br>
 
-<p>
-<input type="radio" name="sauce" value="Marinara" required> Marinara<br>
-<input type="radio" name="sauce" value="Ranch"> Ranch<br>
-<input type="radio" name="sauce" value="No Sauce"> No Sauce
-</p>
-
-<h2>Select Toppings</h2>
-
-<p>
+Toppings:<br>
 <input type="checkbox"> Pepperoni<br>
 <input type="checkbox"> Sausage<br>
 <input type="checkbox"> Mushroom<br>
 <input type="checkbox"> Pineapple<br>
 <input type="checkbox"> Peppers<br>
-<input type="checkbox"> Onions
-</p>
+<input type="checkbox"> Onions<br><br>
 
-<h2>Additional Instructions</h2>
+Additional Instructions:<br>
+<textarea rows="4" cols="30"></textarea><br><br>
 
-<textarea rows="4" cols="30">Add instructions</textarea>
-
-<p>
 <input type="submit" value="Submit">
-</p>
 
 </form>
 
 <h2>List of My Favorite Games</h2>
 
 <table>
-<tr>
-  <th>Developer</th>
-  <th>Title</th>
-  <th>Year</th>
-</tr>
+  <tr>
+    <th>Developer</th>
+    <th>Title</th>
+    <th>Year</th>
+  </tr>
 
-<tr>
-  <td rowspan="3">Bungie</td>
-  <td>Halo</td>
-  <td>2001</td>
-</tr>
+  <tr>
+    <td rowspan="3">Bungie</td>
+    <td>Halo</td>
+    <td>2001</td>
+  </tr>
 
-<tr>
-  <td>Halo 2</td>
-  <td>2004</td>
-</tr>
+  <tr>
+    <td>Halo 2</td>
+    <td>2004</td>
+  </tr>
 
-<tr>
-  <td>Halo 3</td>
-  <td>2007</td>
-</tr>
+  <tr>
+    <td>Halo 3</td>
+    <td>2007</td>
+  </tr>
 
-<tr>
-  <td>Mojang</td>
-  <td>Minecraft</td>
-  <td>2011</td>
-</tr>
+  <tr>
+    <td>Mojang</td>
+    <td>Minecraft</td>
+    <td>2011</td>
+  </tr>
 
-<tr>
-  <td colspan="3">Count: 4</td>
-</tr>
-
+  <tr>
+    <td colspan="3">Count: 4</td>
+  </tr>
 </table>
 
 </body>
 </html>
-
