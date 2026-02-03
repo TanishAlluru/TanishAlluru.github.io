@@ -58,6 +58,11 @@ p.blue {
   border-bottom: 2px solid #000;
 }
 
+/* Add space only between consecutive blue paragraphs */
+p.blue + p.blue {
+  margin-top: 14px;
+}
+
 /* List header spacing */
 article:nth-of-type(2) h2 {
   margin-top: 18px;
