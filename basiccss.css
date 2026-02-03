@@ -1,0 +1,116 @@
+/* 5_css1.css */
+
+body {
+  margin: 0;
+  padding: 12px 10px 30px;
+  background: #b9dce7; /* light blue page background */
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Headings */
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  text-align: center;
+  margin: 10px 0 18px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  margin: 10px 0 10px;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 18px 0 10px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 13px;
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+/* 2nd paragraph boxed */
+#paragraph2 {
+  background: #ffffff;
+  border: 4px solid #1a7a1a;
+  width: 70%;
+  margin: 18px auto;
+  padding: 18px 28px;
+  line-height: 1.8;
+}
+
+/* Dark blue blocks (4th + 5th paragraphs) */
+p.blue {
+  background: #001a7a;
+  color: #ffffff;
+  padding: 18px 12px;
+  margin: 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+/* List header spacing */
+article:nth-of-type(2) h2 {
+  margin-top: 18px;
+}
+
+/* List: force two-digit numbering like 01. 02. ... */
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 8px 0 18px;
+  counter-reset: item;
+}
+
+ol li {
+  margin: 2px 0;
+}
+
+ol li::before {
+  counter-increment: item;
+  content: counter(item, decimal-leading-zero) ". ";
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Link colors */
+ol a {
+  color: #0000ee; /* classic blue */
+  text-decoration: underline;
+}
+
+section p a {
+  color: #b00000; /* red/maroon for W3schools link */
+  text-decoration: underline;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse; /* overlapping borders */
+  margin-top: 10px;
+  width: 520px;
+  background: #ffffff;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+th {
+  background: #d9d9d9; /* gray header */
+  font-weight: 700;
+}
+
+td {
+  background: #ffffff;
+}
