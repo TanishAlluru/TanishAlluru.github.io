@@ -1,0 +1,160 @@
+/* 7_transition.css */
+
+/* ---------- Basic layout (so the hover effects look like your screenshots) ---------- */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav#menuItems{
+    width: 240px;
+    background: #000;
+    height: 100vh;
+    float: left;
+}
+
+main{
+    margin-left: 240px;
+}
+
+header{
+    background: red;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header p{
+    margin: 0;
+    font-size: 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 44px;
+    margin: 28px 0;
+}
+
+/* Articles grid */
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 28px;
+    padding: 20px 30px 40px;
+    align-items: start;
+}
+
+/* ---------- 1) First letter styling (main text only) ---------- */
+article > p:first-of-type::first-letter{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    line-height: 1;
+}
+
+/* ---------- 2) Google "Read more..." arrow icon ---------- */
+article a[href*="google.com"]::after{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    vertical-align: -3px;
+
+    background-image: url("arrowarrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* ---------- 3/4) Article fade + expand on hover (2s both ways) ---------- */
+article{
+    color: #bcbcbc;                 /* lightly-colored text to start */
+    transform: scale(1);
+    transition: color 2s, transform 2s;
+}
+
+article:hover{
+    color: #222;                    /* darker on hover */
+    transform: scale(1.08);         /* “expands” */
+}
+
+/* Make headings follow the same light→dark idea */
+article h2{
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+/* Keep "Read more" link readable even when article text is light */
+article a{
+    color: #2a48d6;
+    text-decoration: underline;
+}
+
+/* ---------- 5) Nav button hover background change ---------- */
+nav#menuItems button{
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #0b2a8a;
+    background: #0b35ff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+}
+
+nav#menuItems button:hover{
+    background: #c59a1a; /* gold-ish */
+    color: #fff;
+}
+
+/* ---------- 6) Recent Articles hover shows jump menu ---------- */
+#jumpMenu{
+    list-style: none;
+    margin: 0;
+    padding: 8px 0 10px;
+    background: #c59a1a;
+    display: none; /* hidden until hover */
+}
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+    display: block; /* keep visible when moving into the menu */
+}
+
+/* Jump menu links */
+#jumpMenu li{
+    padding: 0;
+    margin: 0;
+}
+
+#jumpMenu a{
+    display: block;
+    padding: 2px 0;
+    text-align: center;
+    color: #0027ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ---------- 7) Hover on jump menu item changes font + background ---------- */
+#jumpMenu a:hover{
+    background: #0b35ff;
+    color: #ffb000; /* orange-ish */
+}
+
+/* Optional: "Thank you for visiting!" style similar to screenshot */
+#thanks{
+    margin: 0 30px 30px;
+    padding: 18px;
+    border: 1px solid #000;
+    background: #8bd3ff;
+    width: fit-content;
+}
+
+#thanks a{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    color: #1236ff;
+}
