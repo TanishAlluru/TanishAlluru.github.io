@@ -1,0 +1,219 @@
+/* ===========================
+   Mobile-first, no framework
+   Responsive: 412px vs 1920px
+   =========================== */
+
+:root{
+  --bg: #0b1220;
+  --surface: rgba(255,255,255,0.06);
+  --card: rgba(16,31,58,0.70);
+  --text: #e9eefc;
+  --muted: #b8c3e6;
+  --line: rgba(233, 238, 252, 0.14);
+  --accent: #7aa2ff;
+  --accent2: #7ef0c7;
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.55;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 700px at 20% 0%, rgba(122,162,255,0.25), transparent 60%),
+    radial-gradient(900px 600px at 80% 10%, rgba(126,240,199,0.18), transparent 55%),
+    var(--bg);
+}
+
+a{
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+a:hover{ color: var(--accent2); }
+
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: 12px;
+  background: rgba(16,31,58,0.9);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+.skip-link:focus{
+  left: 12px;
+  z-index: 9999;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 14px 28px;
+}
+
+/* ===========================
+   Header (Mobile layout)
+   =========================== */
+
+header{
+  background: linear-gradient(180deg, var(--surface), rgba(255,255,255,0.02));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 16px;
+  box-shadow: var(--shadow);
+}
+
+header h1{
+  margin: 0 0 8px;
+  font-size: 1.7rem;
+  letter-spacing: 0.3px;
+}
+
+header p{
+  margin: 6px 0;
+  color: var(--muted);
+}
+header strong{ color: var(--text); }
+
+nav{
+  margin-top: 14px;
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+nav a{
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  text-decoration: none;
+}
+
+/* ===========================
+   Main content (Mobile layout)
+   =========================== */
+
+main{
+  margin-top: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+section{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 14px;
+}
+
+section h2{
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
+}
+
+article{
+  background: rgba(16,31,58,0.42);
+  border: 1px solid rgba(233, 238, 252, 0.10);
+  border-radius: 14px;
+  padding: 12px 12px;
+  margin-top: 12px;
+}
+
+article h3{
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+}
+
+p{ margin: 8px 0; color: var(--muted); }
+ul{ margin: 8px 0 0 18px; color: var(--muted); }
+li{ margin: 6px 0; }
+
+footer{
+  margin-top: 16px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   Tablet+
+   =========================== */
+@media (min-width: 700px){
+  header{
+    padding: 22px 22px;
+  }
+
+  header h1{
+    font-size: 2.05rem;
+  }
+
+  section{
+    padding: 18px 18px;
+  }
+
+  section h2{
+    font-size: 1.25rem;
+  }
+
+  nav ul{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* ===========================
+   Desktop/Laptop layout
+   (makes it clearly different)
+   =========================== */
+@media (min-width: 1100px){
+  .container{
+    max-width: 1200px;
+    padding: 26px 18px 36px;
+  }
+
+  /* Two-column layout: sidebar header + main content */
+  .container{
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  header{
+    position: sticky;
+    top: 18px;
+    align-self: start;
+  }
+
+  main{
+    margin-top: 0;
+    gap: 16px;
+  }
+
+  /* Make some sections span full width nicely */
+  section{
+    padding: 18px 18px;
+  }
+
+  /* Slightly denser desktop typography */
+  body{
+    font-size: 16.5px;
+  }
+
+  header h1{
+    font-size: 2.2rem;
+  }
+}
