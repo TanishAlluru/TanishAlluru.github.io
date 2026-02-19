@@ -1,4 +1,4 @@
-// 10_js.js
+// script.js
 
 // Runs after the HTML is parsed because we use `defer`
 document.addEventListener("DOMContentLoaded", () => {

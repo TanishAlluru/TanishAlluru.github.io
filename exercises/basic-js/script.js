@@ -1,4 +1,4 @@
-// basicjs.js
+// script.js
 
 // ---------- helpers ----------
 function getCounterValue() {
