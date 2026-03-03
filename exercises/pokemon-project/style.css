@@ -1,0 +1,93 @@
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #bfe2ee;
+  margin: 0;
+  padding: 24px;
+}
+
+.card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 6px solid #d6a100;
+  border-radius: 28px;
+  padding: 22px;
+}
+
+h1 { margin: 0 0 14px; text-align: center; }
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+#query { width: 220px; padding: 6px 8px; }
+
+.status { min-height: 22px; text-align: center; }
+
+.viewer {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+#pokeImg {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: none;
+}
+
+#pokeAudio { width: min(420px, 100%); display: none; }
+
+.note { color: #444; font-size: 0.95rem; text-align: center; }
+
+.moves {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  padding-bottom: 10px;
+}
+
+.movesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  width: min(520px, 100%);
+}
+
+.movesGrid select { padding: 6px; }
+
+#addBtn { padding: 8px 14px; }
+
+.team { margin-top: 16px; }
+.teamTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.teamTable th, .teamTable td {
+  border: 1px solid #333;
+  padding: 10px;
+  vertical-align: top;
+}
+.pokeCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pokeCell img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.movesList {
+  margin: 0;
+  padding-left: 18px;
+}

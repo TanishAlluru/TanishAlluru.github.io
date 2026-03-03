@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokemon Team Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Pokemon Team Builder</h1>
+
+    <form id="searchForm" class="row" autocomplete="off">
+      <label for="query"><strong>Name or ID</strong></label>
+      <input id="query" type="text" placeholder="e.g., 25 or pikachu" />
+      <button id="findBtn" type="submit">Find</button>
+    </form>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section class="viewer">
+      <img id="pokeImg" alt="" />
+      <audio id="pokeAudio" controls></audio>
+      <div id="audioNote" class="note"></div>
+    </section>
+
+    <section class="moves">
+      <div class="movesGrid">
+        <select id="move1"></select>
+        <select id="move2"></select>
+        <select id="move3"></select>
+        <select id="move4"></select>
+      </div>
+
+      <button id="addBtn" type="button" disabled>Add to Team</button>
+    </section>
+
+    <section class="team">
+      <h2>Your Team</h2>
+      <div id="teamEmpty" class="note">No Pokémon added yet.</div>
+      <table id="teamTable" class="teamTable" hidden>
+        <thead>
+          <tr>
+            <th>Pokémon</th>
+            <th>Moves</th>
+          </tr>
+        </thead>
+        <tbody id="teamBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
